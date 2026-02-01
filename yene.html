@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Yene ❤️</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #ff6a88, #ff99ac);
+      font-family: 'Arial', sans-serif;
+      color: white;
+    }
+
+    .card {
+      text-align: center;
+      padding: 30px 20px;
+      width: 90%;
+      max-width: 400px;
+      background: rgba(0,0,0,0.25);
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    h1 {
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 25px;
+    }
+
+    button {
+      width: 100%;
+      padding: 15px;
+      font-size: 18px;
+      border: none;
+      border-radius: 12px;
+      margin: 10px 0;
+      cursor: pointer;
+    }
+
+    #yes {
+      background: #2ecc71;
+      color: white;
+    }
+
+    #no {
+      background: #e74c3c;
+      color: white;
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Yene ❤️</h1>
+    <p>Will you be my Valentine… and my forever? 💍</p>
+
+    <button id="yes">YES 💖</button>
+    <button id="no">NO 💔</button>
+  </div>
+
+  <script>
+    const noBtn = document.getElementById("no");
+    const yesBtn = document.getElementById("yes");
+
+    function moveNo() {
+      const x = Math.random() * 60 - 30;
+      const y = Math.random() * 60 - 30;
+      noBtn.style.transform = `translate(${x}px, ${y}px)`;
+    }
+
+    noBtn.addEventListener("touchstart", moveNo);
+    noBtn.addEventListener("mouseover", moveNo);
+
+    yesBtn.addEventListener("click", () => {
+      document.body.innerHTML = `
+        <div style="
+          height:100vh;
+          display:flex;
+          justify-content:center;
+          align-items:center;
+          text-align:center;
+          background:linear-gradient(135deg,#ff6a88,#ff99ac);
+          color:white;
+          font-family:Arial;
+          padding:20px;">
+          <div>
+            <h1>Yene 🥹❤️</h1>
+            <p style="font-size:18px;">
+              Thank you for choosing me.<br>
+              I promise to love you, respect you,<br>
+              and build our future together 💍✨
+            </p>
+          </div>
+        </div>
+      `;
+    });
+  </script>
+
+</body>
+</html>
